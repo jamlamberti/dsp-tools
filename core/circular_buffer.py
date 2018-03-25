@@ -10,6 +10,7 @@ class CircularBuffer(object):
                 raise ValueError('Must specify all initial values')
             self._buffer = [x for x in initial_values]
         self._initial_values = [x for x in self._buffer]
+
     def append(self, val):
         self._buffer[self._write_ptr] = val
         self._write_ptr = (self._write_ptr + 1) % self._buf_sz
