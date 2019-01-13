@@ -1,0 +1,22 @@
+plugins:
+  radon: 
+    enabled: true
+    config: 
+      python_version: 2
+  shellcheck:
+    enabled: true
+  sonar-python:
+    enabled: true
+    config:
+      minimum_severity: minor
+  markdownlint:
+    enabled: true
+  fixme:
+    enabled: true
+
+engines:
+  bandit:
+    enabled: true
+  pylint:
+    enabled: true
+    channel: "beta"
