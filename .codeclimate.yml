@@ -13,8 +13,6 @@ plugins:
     enabled: true
   fixme:
     enabled: true
-
-engines:
   bandit:
     enabled: true
   pylint:
