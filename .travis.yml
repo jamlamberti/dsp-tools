@@ -5,6 +5,7 @@ python:
 cache: apt
 before_install:
     - sudo apt-get -qq  update -y
+    - pip -q install pytest pytest-cov codecov coveralls
 
 install:
     - pip install -r requirements.txt
