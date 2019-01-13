@@ -47,3 +47,20 @@ def test_flush():
 
     for i in range(buf_sz):
         assert buf_sz - 1 - i == circ_buf[i]
+
+
+def test_next():
+    buf_sz = 10
+    circ_buf = CircularBuffer(buf_sz, initial_values=list(range(buf_sz)))
+    cb_iter = circ_buf.__iter__()
+    cnt = 0
+    while True:
+        try:
+            val = cb_iter.next()
+        except StopIteration:
+            break
+        else:
+            assert buf_sz - 1 - (cnt % buf_sz) == val
+            cnt += 1
+            if cnt > buf_sz * 2:
+                break

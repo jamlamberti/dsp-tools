@@ -3,14 +3,17 @@ class CircularBuffer(object):
     def __init__(self, buf_sz, initial_values=None, initial_value=0):
         self._buf_sz = buf_sz
         self._write_ptr = 0
+        self._buffer = self._get_default_buf(initial_values, initial_value)
+        self._initial_values = self._buffer[:]
+        self._it_val = 0
 
+    def _get_default_buf(self, initial_values, initial_value):
         if initial_values is None:
-            self._buffer = [initial_value for _ in range(buf_sz)]
+            return [initial_value for _ in range(self._buf_sz)]
         else:
             if len(initial_values) != self._buf_sz:
                 raise ValueError('Must specify all initial values')
-            self._buffer = [x for x in initial_values]
-        self._initial_values = [x for x in self._buffer]
+            return initial_values[:]
 
     def append(self, val):
         self._buffer[self._write_ptr] = val
