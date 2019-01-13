@@ -23,11 +23,14 @@ class CircularBuffer(object):
         self._it_val = 0
         return self
 
-    def next(self):
+    def __next__(self):
         if self._it_val > self._buf_sz:
             raise StopIteration
         self._it_val += 1
         return self.get(self._it_val - 1)
+
+    def next(self):
+        return self.__next__()
 
     def get(self, idx):
         actual_idx = (self._write_ptr - 1 - idx) % self._buf_sz
