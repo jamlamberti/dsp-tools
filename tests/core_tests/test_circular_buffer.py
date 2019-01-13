@@ -21,7 +21,6 @@ def test_invalid_size():
     with pytest.raises(ValueError):
         buf_sz = 10
         circ_buf = CircularBuffer(buf_sz, initial_values=list(range(buf_sz - 1)))
-        print circ_buf
 
 
 def test_iteration():
