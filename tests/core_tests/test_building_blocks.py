@@ -45,7 +45,6 @@ def test_delay():
             assert all_equal(
                 unit_step_shifted.next_value(),
                 unit_step_delayed.next_value())
-        print "Rewinding"
         unit_step_shifted.rewind()
         unit_step_delayed.rewind()
 
