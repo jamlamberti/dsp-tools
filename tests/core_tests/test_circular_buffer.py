@@ -1,4 +1,5 @@
 import random
+import pytest
 from core.circular_buffer import CircularBuffer
 
 
