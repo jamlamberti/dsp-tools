@@ -175,6 +175,20 @@ class Square(BaseGenerator):
         self._generator.rewind()
 
 
+class LogProcessor(BaseGenerator):
+    """Take the log"""
+    def __init__(self, generator):
+        super(LogProcessor, self).__init__()
+        self._generator = generator
+
+    def next_value(self):
+        val = self._generator.next_value()
+        return np.log(val)
+
+    def rewind(self):
+        self._generator.rewind()
+
+
 class SquareRoot(BaseGenerator):
     def __init__(self, generator):
         super(SquareRoot, self).__init__()
