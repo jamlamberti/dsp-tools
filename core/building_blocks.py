@@ -1,4 +1,5 @@
 import numpy as np
+import functools
 from signal_generators.base_generator import BaseGenerator
 from core.circular_buffer import CircularBuffer
 
@@ -63,7 +64,7 @@ class Multiplier(BaseGenerator):
         self._generators = generators
 
     def next_value(self):
-        return reduce(
+        return functools.reduce(
             lambda x, y: x * y,
             [gen.next_value() for gen in self._generators], 1)
 

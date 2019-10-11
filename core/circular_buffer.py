@@ -1,3 +1,7 @@
+import sys
+_ON_PYTHON3 = sys.version_info >= (3, 0)
+
+
 class CircularBuffer(object):
     def __init__(self, buf_sz, initial_values=None, initial_value=0):
         self._buf_sz = buf_sz
@@ -20,7 +24,7 @@ class CircularBuffer(object):
 
     def __iter__(self):
         self._it_val = 0
-        return self
+        return self if not _ON_PYTHON3 else iter(self)
 
     def next(self):
         if self._it_val > self._buf_sz:
