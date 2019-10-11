@@ -1,3 +1,4 @@
+from __future__ import division
 import random
 from signal_generators import basic_signals
 
@@ -7,7 +8,7 @@ MAX_STEPS = 10
 
 def get_shift():
     """Utility func for getting a reasonible shift in MAX_STEPS"""
-    return random.randint(MAX_STEPS/4, MAX_STEPS/2)
+    return random.randint(MAX_STEPS // 4, MAX_STEPS // 2)
 
 
 def wrap_teardowns(func, generator):
