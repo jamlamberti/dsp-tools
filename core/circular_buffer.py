@@ -1,7 +1,3 @@
-import sys
-_ON_PYTHON3 = sys.version_info >= (3, 0)
-
-
 class CircularBufferIterator(object):
     def __init__(self, cb):
         self._cb = cb
@@ -15,6 +11,7 @@ class CircularBufferIterator(object):
 
     def __next__(self):
         return self.next()
+
 
 class CircularBuffer(object):
     def __init__(self, buf_sz, initial_values=None, initial_value=0):
