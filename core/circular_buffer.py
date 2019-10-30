@@ -38,16 +38,6 @@ class CircularBuffer(object):
 
     def __iter__(self):
         return CircularBufferIterator(self)
-    #def __cb_iter(self):
-    #    self._it_val = 0
-    #    return self if not _ON_PYTHON3 else self
-
-    #def next(self):
-    #    if self._it_val > self.buf_sz:
-    #        raise StopIteration
-    #    self._it_val += 1
-    #    return self.get(self._it_val - 1)
-
 
     def get(self, idx):
         actual_idx = (self._write_ptr - 1 - idx) % self.buf_sz
@@ -56,6 +46,3 @@ class CircularBuffer(object):
     def flush(self):
         # XXX: flush is probably the wrong thing
         self._buffer = [x for x in self._initial_values]
-
-    #__iter__ = __cb_iter
-
