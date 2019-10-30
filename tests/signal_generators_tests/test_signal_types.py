@@ -1,5 +1,5 @@
-from signal_generators import signal_types
-from signal_generators import basic_signals
+from dsptools.signal_generators import signal_types
+from dsptools.signal_generators import basic_signals
 from tests.signal_generators_tests import test_basic_signals
 
 

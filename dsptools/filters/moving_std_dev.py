@@ -1,8 +1,8 @@
 import numpy as np
-from signal_generators.base_generator import BaseGenerator
-from core.building_blocks import SplitSignal
-from core.circular_buffer import CircularBuffer
-from filters.simple_moving_average import SimpleMovingAverage
+from ..signal_generators.base_generator import BaseGenerator
+from ..core.building_blocks import SplitSignal
+from ..core.circular_buffer import CircularBuffer
+from ..filters.simple_moving_average import SimpleMovingAverage
 
 
 class MovingStdDev(BaseGenerator):

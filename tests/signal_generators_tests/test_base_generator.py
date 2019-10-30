@@ -1,4 +1,4 @@
-from signal_generators.base_generator import BaseGenerator
+from dsptools.signal_generators.base_generator import BaseGenerator
 
 
 def test_base_generator():

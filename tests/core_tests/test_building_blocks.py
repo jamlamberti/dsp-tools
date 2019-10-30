@@ -1,5 +1,5 @@
-from core import building_blocks
-from signal_generators import basic_signals
+from dsptools.core import building_blocks
+from dsptools.signal_generators import basic_signals
 from tests.signal_generators_tests import test_basic_signals
 
 

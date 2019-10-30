@@ -1,7 +1,7 @@
 import numpy as np
 import functools
-from signal_generators.base_generator import BaseGenerator
-from core.circular_buffer import CircularBuffer
+from ..signal_generators.base_generator import BaseGenerator
+from .circular_buffer import CircularBuffer
 
 
 class Adder(BaseGenerator):

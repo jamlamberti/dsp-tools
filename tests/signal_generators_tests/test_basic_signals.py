@@ -1,6 +1,6 @@
 from __future__ import division
 import random
-from signal_generators import basic_signals
+from dsptools.signal_generators import basic_signals
 
 
 MAX_TEARDOWNS = 5

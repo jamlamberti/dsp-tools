@@ -1,6 +1,6 @@
 import random
 import pytest
-from core.circular_buffer import CircularBuffer
+from dsptools.core.circular_buffer import CircularBuffer
 
 
 def test_circular_buffer():

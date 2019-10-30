@@ -1,5 +1,5 @@
-from signal_generators.base_generator import BaseGenerator
-from core.circular_buffer import CircularBuffer
+from ..signal_generators.base_generator import BaseGenerator
+from ..core.circular_buffer import CircularBuffer
 
 
 class CCDEFilter(BaseGenerator):

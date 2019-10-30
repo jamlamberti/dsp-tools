@@ -1,4 +1,4 @@
-from signal_generators.base_generator import BaseGenerator
+from ..signal_generators.base_generator import BaseGenerator
 
 
 class CumulativeMovingAverage(BaseGenerator):
